@@ -1,0 +1,17 @@
+.my-1{
+    margin: 0.7rem 0;
+}
+.row{
+display: flex;
+text-align:center;
+}
+body{
+    background-color: rgb(232, 214, 177);
+}
+.head2{
+  background-color:  rgb(112, 78, 39); 
+  padding: 1rem 1rem;
+  color:rgb(237, 244, 228);
+  text-align: center;
+  font-weight: 530;
+}
