@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To Do List</title>
+
+    <link rel="stylesheet" href="/public/stylesheets/stylesheet.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+
+</head>
+<body>
+    <div class="margins">
+        <header>
+            <h1>To Do List</h1>
+        </header>
+
+        <input type="text"><button>Add</button>
+        <ul>
+        </ul>
+
+        <script>
+            
+            let inputElm = document.querySelector("input");
+            
+            function getUserItem(){
+                if(inputElm.value){  
+                    addToList(inputElm.value);
+                    inputElm.value = ""; //clears input box
+                }
+                else{
+                    alert("Please enter something in the textbox");
+                }
+            }
+
+            function addToList (content){
+                let itemElm = document.createElement("li");
+                itemElm.textContent = content;
+                let listElm = document.querySelector("ul");
+                listElm.appendChild(itemElm);
+            }
+
+            let buttonElm = document.querySelector("button");
+            buttonElm.addEventListener("click", getUserItem);
+
+            //can create a function directly if only using once
+            //keypress makes event happen when key is pressed
+            //keyup makes event happen when key released
+
+            inputElm.addEventListener("keyup", function(event){
+                //if user has pressed "enter" key
+                if (event.key == "Enter"){
+                    getUserItem();
+                }
+            });
+
+            
+        </script>
+
+    <h2 class="head">Other Links</h2>
+    <ul>
+        <li><a href="personal.html">My Hobbies</a></li>
+        <li><a href="index.html">Home</a></li>
+    </ul>
+    </div>
+</body>
+</html>
