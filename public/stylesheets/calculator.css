@@ -1,0 +1,28 @@
+.keys{
+    display: grid;
+    grid-template-columns: repeat(4, 10vw);
+    grid-auto-rows: 9vw;
+    gap: 10px;
+    
+}
+.calculator{
+    text-align: center;
+}
+
+.display{
+    background-color: rgb(217, 175, 84);
+    width: calc(40vw + 30px);
+    padding: 20px 0;
+    margin: 20px 0;
+}
+
+button{
+    font-size: 20px;
+    border: none;
+    background-color: rgb(22, 92, 27);
+    color:antiquewhite;
+}
+button:hover{
+    background-color: azure;
+    transition: all 0.4s;
+}
